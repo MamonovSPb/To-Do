@@ -14,6 +14,14 @@ function addTask(name){
     delete list[name];
  }
 
+
+function showList() {
+    for (let key in list) {
+        console.log(list[key] +": \n " + key);
+    }
+}
+
+/*
 function showList(){
     for (let key in list){
         if(list[key]==="To Do"){
@@ -25,14 +33,8 @@ function showList(){
         }
     }
 }
-
-/*
-function showList() {
-    for (let key in list) {
-        console.log(list[key] + ":" +  key);
-    }
-}
 */
+
 
 
 

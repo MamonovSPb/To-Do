@@ -14,26 +14,25 @@ function addTask(name){
     delete list[name];
  }
 
-
-function showList() {
-    for (let key in list) {
-        console.log(list[key] +": \n " + key);
-    }
-}
-
-/*
 function showList(){
-    for (let key in list){
-        if(list[key]==="To Do"){
-            console.log(key);
-        }else if(list[key]==="Done"){
-            console.log(key);
-        }else if(list[key]==="In progress"){
-            console.log(key);
+    let listDone="";
+    let listToDo="";
+    let listInPr="";
+
+    for(let key in list){
+        if(list[key]=="Done"){
+            listDone+=`${key} \n` ;
         }
+        if(list[key]=="To Do"){
+            listToDo+=`${key} \n`;
+        }
+        if(list[key]=="In progress"){
+            listInPr+=`${key} \n`;
+        }
+
     }
+    return console.log(`To do:\n${listToDo} \n` + `Done: \n${listDone} \n` + `In progress: \n${listInPr}`);
 }
-*/
 
 
 
